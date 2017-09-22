@@ -3,7 +3,7 @@ use Mix.Config
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :tilex, TilexWeb.Endpoint,
-  http: [port: 4001],
+  http: [port: 4002],
   server: true
 
 config :tilex, :sql_sandbox, true
@@ -24,7 +24,7 @@ config :tilex, :auth_controller, Test.AuthController
 config :tilex, :slack_notifier, Test.Slack
 config :tilex, :twitter_notifier, Test.Twitter
 config :tilex, :organization_name, "Hashrocket"
-config :tilex, :canonical_domain, "https://til.hashrocket.com"
+config :tilex, :canonical_domain, "http://localhost:4002"
 config :tilex, :default_twitter_handle, "hashrocket"
 config :tilex, :hosted_domain, "hashrocket.com"
 
