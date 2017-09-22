@@ -83,7 +83,4 @@ config :tilex, :canonical_domain, System.get_env("CANONICAL_DOMAIN")
 config :tilex, :default_twitter_handle, System.get_env("DEFAULT_TWITTER_HANDLE")
 config :tilex, :cors_origin, System.get_env("CORS_ORIGIN")
 
-config :appsignal, :config,
-  active: true
-
 config :tilex, :page_size, 50
