@@ -19,6 +19,8 @@ defmodule TilexWeb do
   def model do
     quote do
       use Ecto.Schema
+      @primary_key {:id, :binary_id, autogenerate: true}
+      @foreign_key_type :binary_id
 
       import Ecto
       import Ecto.Changeset

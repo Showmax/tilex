@@ -2,7 +2,8 @@ defmodule Tilex.Repo.Migrations.CreatePost do
   use Ecto.Migration
 
   def change do
-    create table(:posts) do
+    create table(:posts, primary_key: false) do
+      add :id, :uuid, primary_key: true
       add :title, :varchar, null: false
       add :body, :text, null: false
 

@@ -3,7 +3,7 @@ defmodule Tilex.Repo.Migrations.AddDeveloperIdToPosts do
 
   def change do
     alter table(:posts) do
-      add :developer_id, references(:developers, on_delete: :delete_all)
+      add :developer_id, references(:developers, type: :uuid, on_delete: :delete_all)
     end
     create index(:posts, [:developer_id])
   end
